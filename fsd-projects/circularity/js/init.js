@@ -24,7 +24,9 @@ var init = function (window) {
 
 
         // TODO 2 : Create a function that draws a circle 
-        
+        var positionX = 0;
+         var points = 0;
+         var speed = 15
 
 
         // TODO 3 : Call the drawCircle() function
@@ -48,12 +50,23 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
 
-            
+             function update() {
+            positionX = positionX + speed;
+            moveBoxTo(positionX)
+            if(positionX > boardWidth){
+                speed = -speed;
+            }
+        }
+
             // TODO 5 : Call game.checkCirclePosition() on your circles
            
 
             // TODO 8 / TODO 9 : Iterate over the array
-           
+            if(positionX < 0){
+               speed = speed * -1
+            }
+
+            };
             
         }
     
@@ -70,7 +83,15 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+             function handleBoxClick() {
+            positionX = 0;
+            points++
+            changeBoxText(points)
+            if(speed > 0){
+            speed = speed + 2
+           
+            }
+
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
