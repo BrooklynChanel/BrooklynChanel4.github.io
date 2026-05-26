@@ -65,9 +65,9 @@ for(var i = 0; i < 100; i++) {
 i++) {
     var eachCircle = circles[i];
 }
-physikz.updatePosition(eachCircle);
+physikz.updatePosition[eachCircle];
 
-game.checkCirclePosition(eachCircle);
+game.checkCirclePosition[eachCircle];
         }
         
     
